@@ -103,8 +103,8 @@ for e := list_name.Front(); e != nil; e = e.Next() {
 |---|---|---|
 | Size | Dynamic | Fixed |
 | Initialization | `list_name := list.New()` | `array_name := [size]element_type` |
-| Accessing elements | Slower | Faster |
-| Inserting elements | Faster | Slower |
-| Deleting elements | Faster | Slower |
+| Accessing elements | ❌ | ✅ |
+| Inserting elements | ✅ | ❌ |
+| Deleting elements | ✅ | ❌ |
 | Memory usage | Less | More |
 | Use cases | When We need more flexibility | When We need more performance |
