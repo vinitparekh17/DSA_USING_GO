@@ -18,6 +18,18 @@ where:
 fmt.Println(arr[0])
 ```
 
+## Advantages of Arrays:
+
+[x] Random access is possible. We can access elements by their index.
+[x] Arrays have better cache locality that can make a pretty big difference in performance.
+
+## Disadvantages of Arrays:
+
+[x] Fixed size. We cannot add or remove elements from an array after declaring it.
+[x] Inserting a new element in the middle of an array is expensive. We have to shift all the elements after the inserted element to the right by one position.
+[x] Deleting an element from the middle of an array is expensive. We have to shift all the elements after the deleted element to the left by one position.
+[x] If We do not know the size of the array in advance, We have to declare an array with a big size to make sure that it can hold all the elements. This can waste memory space.
+
 ## Graphical Representation of an Array:
 
 | Index | 0 | 1 | 2 | 3 | 4 |
@@ -65,6 +77,18 @@ To declare a linked list in Go, We use the following syntax:
 list_name := list.New()
 ```
 
+## Advantages of Linked Lists:
+
+[x] Dynamic size
+[x] Ease of insertion/deletion
+[x] Ease of rearranging elements
+
+## Disadvantages of Linked Lists:
+
+[x] Random access is not allowed. We have to access elements sequentially starting from the first node. So we cannot do binary search with linked lists.
+[x] Extra memory space for a pointer is required with each element of the list.
+[x] Not cache friendly. Since array elements are contiguous locations, there is locality of reference which is not there in case of linked lists.
+
 ## Graphical Representation of a Linked List:
 
 | Value | Next |
@@ -108,3 +132,20 @@ for e := list_name.Front(); e != nil; e = e.Next() {
 | Deleting elements | ✅ | ❌ |
 | Memory usage | Less | More |
 | Use cases | When We need more flexibility | When We need more performance |
+
+## Run time and Space Complexity of Arrays and Linked Lists:
+
+| Complexity | Linked Lists | Arrays |
+|---|---|---|
+| Readings | O(n) | O(1) |
+| Insertions | O(1) | O(n) |
+| Deletions | O(1) | O(n) |
+| Memory usage | O(n) | O(n) |
+
+## Exercise:
+
+1. Suppose you’re building an app for restaurants to take customer orders. Your app needs to store a list of orders. Servers keep adding orders to this list, and chefs take orders off the list and make them. It’s an order queue: servers add orders to the back of the queue, and the chef takes the first order off the queue and cooks it. would you use an Array or Linked list to implement this queue?
+```
+Answer: Linked List
+Reason: Inserting and Removing elements from the queue from the both ends will be easier that
+```
