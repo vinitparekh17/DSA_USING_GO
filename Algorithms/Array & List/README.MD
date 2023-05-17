@@ -18,7 +18,13 @@ where:
 fmt.Println(arr[0])
 ```
 
-## Methods of Arrays
+## Graphical Representation of an Array:
+
+| Index | 0 | 1 | 2 | 3 | 4 |
+|---|---|---|---|---|---|
+| Value | 0 | 0 | 0 | 0 | 0 |
+
+## Methods of Arrays:
 
 Arrays in Go have a number of methods that can be used to manipulate the array. These methods include:
 
@@ -33,9 +39,11 @@ Arrays in Go have a number of methods that can be used to manipulate the array. 
 * `Sort()`: Sorts the elements of the array.
 * `Reverse()`: Reverses the order of the elements of the array.
 
-## Slices
+# Slices
 
 Slices are a data structure that stores a collection of elements of the same type. Slices are indexed, which means that each element can be accessed by its index. The index of the first element is 0, the index of the second element is 1, and so on.
+
+## Deference between Arrays and Slices:
 
 | Feature | Array | Slice |
 |---|---|---|
@@ -47,7 +55,7 @@ Slices are a data structure that stores a collection of elements of the same typ
 | Performance | Faster | Slower |
 | Use cases | When We need a fixed-size data structure | When We need a dynamic-size data structure |
 
-## Linked Lists
+# Linked Lists
 
 Linked lists are a data structure that stores a collection of elements, where each element is linked to the next element. Linked lists are not indexed, which means that We cannot access elements by their index.
 
@@ -57,16 +65,29 @@ To declare a linked list in Go, We use the following syntax:
 list_name := list.New()
 ```
 
-Once We have declared a linked list, We can add elements to it using the following methods:
+## Graphical Representation of a Linked List:
 
-* `PushFront(value)`: Adds the value to the front of the list.
-* `PushBack(value)`: Adds the value to the back of the list.
-* `Insert(index, value)`: Adds the value to the list at the specified index.
+| Value | Next |
+|---|---|
+| 1 | 2 |
+| 2 | 3 |
+| 3 | 4 |
 
-We can remove elements from a linked list using the following methods:
 
-* `Remove(value)`: Removes the first occurrence of the value from the list.
-* `RemoveAt(index)`: Removes the element at the specified index from the list.
+## Methods of Linked Lists:
+
+Linked lists in Go have a number of methods that can be used to manipulate the linked list. These methods include:
+
+* `Len()`: Returns the length of the linked list.
+* `Front()`: Returns the first element of the linked list.
+* `Back()`: Returns the last element of the linked list.
+* `PushFront(value)`: Adds the value to the front of the linked list.
+* `PushBack(value)`: Adds the value to the back of the linked list.
+* `InsertBefore(value)`: Adds the value to the linked list before the specified element.
+* `InsertAfter(value)`: Adds the value to the linked list after the specified element.
+* `Remove(e)`: Removes the specified element from the linked list.
+* `MoveToFront(e)`: Moves the specified element to the front of the linked list.
+* `MoveToBack(e)`: Moves the specified element to the back of the linked list.
 
 We can iterate over a linked list using a for loop:
 
