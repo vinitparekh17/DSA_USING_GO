@@ -12,8 +12,8 @@ Note that the dictionary should be sorted in order to use binary search.
 
 [Binary search](main.go) is implemented in Go.
 
-1) What is the time complexity of binary search?
+1) What is the time complexity of binary search?<br/>
 ans: O(log n)
 
-2) What is the space complexity of binary search?
+2) What is the space complexity of binary search?<br/>
 ans: O(1)
