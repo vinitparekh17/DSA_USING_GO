@@ -20,15 +20,15 @@ fmt.Println(arr[0])
 
 ## Advantages of Arrays:
 
-- [x] Random access is possible. We can access elements by their index.
-- [x] Arrays have better cache locality that can make a pretty big difference in performance.
+-  Random access is possible. We can access elements by their index.
+-  Arrays have better cache locality that can make a pretty big difference in performance.
 
 ## Disadvantages of Arrays:
 
-- [x] Fixed size. We cannot add or remove elements from an array after declaring it.
-- [x] Inserting a new element in the middle of an array is expensive. We have to shift all the elements after the inserted element to the right by one position.
-- [x] Deleting an element from the middle of an array is expensive. We have to shift all the elements after the deleted element to the left by one position.
-- [x] If We do not know the size of the array in advance, We have to declare an array with a big size to make sure that it can hold all the elements. This can waste memory space.
+- Fixed size. We cannot add or remove elements from an array after declaring it.
+- Inserting a new element in the middle of an array is expensive. We have to shift all the elements after the inserted element to the right by one position.
+- Deleting an element from the middle of an array is expensive. We have to shift all the elements after the deleted element to the left by one position.
+- If We do not know the size of the array in advance, We have to declare an array with a big size to make sure that it can hold all the elements. This can waste memory space.
 
 ## Graphical Representation of an Array:
 
@@ -79,15 +79,15 @@ list_name := list.New()
 
 ## Advantages of Linked Lists:
 
-- [x] Dynamic size
-- [x] Ease of insertion/deletion
-- [x] Ease of rearranging elements
+- Dynamic size
+- Ease of insertion/deletion
+- Ease of rearranging elements
 
 ## Disadvantages of Linked Lists:
 
-- [x] Random access is not allowed. We have to access elements sequentially starting from the first node. So we cannot do binary search with linked lists.
-- [x] Extra memory space for a pointer is required with each element of the list.
-- [x] Not cache friendly. Since array elements are contiguous locations, there is locality of reference which is not there in case of linked lists.
+- Random access is not allowed. We have to access elements sequentially starting from the first node. So we cannot do binary search with linked lists.
+- Extra memory space for a pointer is required with each element of the list.
+- Not cache friendly. Since array elements are contiguous locations, there is locality of reference which is not there in case of linked lists.
 
 ## Graphical Representation of a Linked List:
 
