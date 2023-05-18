@@ -33,7 +33,6 @@ func BinarySearch(arr []int, input int) {
 		} else if arr[mid] > input {
 			high = mid - 1
 		}
-		mid = (low + high) / 2
 	}
 	elapsed := time.Since(start)
 	fmt.Println("Time taken:", elapsed.Milliseconds(), "ms\nAttempts:", attempts)
