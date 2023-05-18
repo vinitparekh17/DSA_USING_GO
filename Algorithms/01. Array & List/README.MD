@@ -14,10 +14,6 @@ where:
 * `5` is the size of the array
 * `int` is the type of the elements in the array
 
-```go
-fmt.Println(arr[0])
-```
-
 ## Advantages of Arrays:
 
 - [x] Randomly accessable
@@ -78,9 +74,9 @@ list_name := list.New()
 
 ## Advantages of Linked Lists:
 
-- Dynamic size
-- Ease of insertion/deletion
-- Ease of rearranging elements
+- [x] Dynamic size
+- [x] Ease of insertion/deletion
+- [x] Ease of rearranging elements
 
 ## Disadvantages of Linked Lists:
 
@@ -122,7 +118,7 @@ for e := list_name.Front(); e != nil; e = e.Next() {
 }
 ```
 
-## When to use Linked Lists or Arrays?
+## Deference between Arrays and Linked Lists:
 
 | Feature | Linked Lists | Arrays |
 |---|---|---|
@@ -148,5 +144,5 @@ for e := list_name.Front(); e != nil; e = e.Next() {
 1. Suppose you’re building an app for restaurants to take customer orders. Your app needs to store a list of orders. Servers keep adding orders to this list, and chefs take orders off the list and make them. It’s an order queue: servers add orders to the back of the queue, and the chef takes the first order off the queue and cooks it. would you use an Array or Linked list to implement this queue?
 ```
 Answer: Linked List
-Reason: Inserting and Removing elements from the queue from the both ends will be easier that
+Reason: Inserting and Removing elements from the queue from the both ends will be easier than an array.
 ```

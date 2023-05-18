@@ -56,6 +56,20 @@ func main() {
 	for e := linkedList.Front(); e != nil; e = e.Next() {
 		fmt.Println(e.Value)
 	}
+
+	// delete middle elem. from list
+	linkedList.Remove(linkedList.Front().Next()) // removes 2
+	fmt.Println("After removing 2")
+	for e := linkedList.Front(); e != nil; e = e.Next() {
+		fmt.Println(e.Value)
+	}
+
+	// insert elem. in mid
+	linkedList.InsertAfter(2, linkedList.Front()) // add 2 at position 2 ezy :)
+	fmt.Println("Insert after first elem..")
+	for e := linkedList.Front(); e != nil; e = e.Next() {
+		fmt.Println(e.Value)
+	}
 }
 
 func reverse(arr []int) []int {
