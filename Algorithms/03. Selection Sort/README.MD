@@ -46,8 +46,6 @@ func SelectonSort(arr []int) ([]int, error) {
 
 In above code as we discussed earlier that we will have to use nested loops in this algorithm, inner to find the smallest element and outer to add that element to the new array and remove it from the old array.
 
-
-
 ## Selection sort complexity
 O(n<sup>2</sup>)
 
