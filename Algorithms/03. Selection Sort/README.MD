@@ -27,3 +27,27 @@ Well, after getting the idea of selection sort, you might have a question that a
 
 Here is the quicl gist of it:
 You check n elements then n - 1  n - 2 … 2, 1. On average, you check a list that has 1/2 × n elements. The runtime is O(n × 1/2 × n). But constants like 1/2 are ignored in Big O notation. but why? Because Big O notation only cares about the general trend of the runtime as the input grows. So the runtime is O(n<sup>2</sup>).
+
+## Selection sort implementation
+
+[Check it out](main.go)
+```go
+func SelectonSort(arr []int) ([]int, error) {
+	newArr := []int{}
+	for range arr {
+		smallest, err := SmallestIndex(arr) // finds the smallest elem. from remaining elems.
+		HandleError(err)
+		newArr = append(newArr, arr[smallest]) // adds smallest elem.
+		arr = append(arr[:smallest], arr[smallest+1:]...) // removes smallest elem.
+	}
+	return newArr, nil
+}
+```
+
+In above code as we discussed earlier that we will have to use nested loops in this algorithm, inner to find the smallest element and outer to add that element to the new array and remove it from the old array.
+
+
+
+## Selection sort complexity
+O(n<sup>2</sup>)
+

@@ -6,12 +6,10 @@ import (
 )
 
 func main() {
-	arr := []int{5, 7, 4, 6, 3, 2, 1}
+	arr := []int{5, 7, 4, 6, 3, 1, 2}
 	sorted, err := SelectonSort(arr)
 	HandleError(err)
-	for _, e := range sorted {
-		fmt.Println(e)
-	}
+	fmt.Println(sorted)
 }
 
 func SmallestIndex(arr []int) (int, error) {
@@ -35,6 +33,14 @@ func SmallestIndex(arr []int) (int, error) {
 func SelectonSort(arr []int) ([]int, error) {
 	newArr := []int{}
 	// logic
+	for range arr {
+		smallest, err := SmallestIndex(arr)
+		HandleError(err)
+		// add the smallest element to the new array
+		newArr = append(newArr, arr[smallest])
+		// remove the smallest element from the old array to run SmallestIndex() recursively and don't get the same smallest element
+		arr = append(arr[:smallest], arr[smallest+1:]...)
+	}
 	return newArr, nil
 }
 
