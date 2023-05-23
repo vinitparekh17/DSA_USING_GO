@@ -46,6 +46,21 @@ func SelectonSort(arr []int) ([]int, error) {
 
 In above code as we discussed earlier that we will have to use nested loops in this algorithm, inner to find the smallest element and outer to add that element to the new array and remove it from the old array.
 
-## Selection sort complexity
-O(n<sup>2</sup>)
+Well can we do it recursively? Yes, we can. But it will be less efficient than the iterative approach. Because recursion uses stack and stack uses memory. So it will be less efficient than the iterative approach.
+
+Anyway, let's see the recursive approach.
+
+```go
+func SelectonSort(arr []int) ([]int, error) {
+    if len(arr) == 0 {
+        return []int{}, nil
+    }
+    smallest, err := SmallestIndex(arr) // finds the smallest elem. from remaining elems.
+    HandleError(err)
+    return append([]int{arr[smallest]}, SelectonSort(append(arr[:smallest], arr[smallest+1:]...))...) 
+    // calling func again with remaining elems. to avoid duplicates
+}
+```
+
+Long story short, recursive func are those who call itself until it reaches the base case. In this case, base case is when the length of the array is 0.
 
