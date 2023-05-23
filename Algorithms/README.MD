@@ -12,10 +12,10 @@
  - Parallel algorithms
 
   1. What are sequential algorithms?
-    - Sequential algorithms are algorithms that execute instructions one after another. They are also known as serial algorithms.
+  - Sequential algorithms are algorithms that execute instructions one after another. They are also known as serial algorithms.
 
-  2. What are parallel algorithms?
-    - Parallel algorithms are algorithms that execute instructions simultaneously. They are also known as concurrent algorithms.
+  1. What are parallel algorithms?
+  - Parallel algorithms are algorithms that execute instructions simultaneously. They are also known as concurrent algorithms.
 
 4. What are the characteristics of algorithms?
 - The following are the characteristics of algorithms:
