@@ -1,10 +1,10 @@
-## Concept of selection sort
-
-<b>"Selection sort is a sorting algorithm that selects the smallest element from an unsorted list in each iteration and places that element at the beginning of the unsorted list."</b>
+## Selection sort
+> "Selection sort is a sorting algorithm that selects the smallest element from an unsorted list in each iteration and places that element at the beginning of the unsorted list."
 
 <hr/>
 <i>Can't understood? Let's understand by assuming a scenario.</i>
 
+## Scenario
 Suppose, you are playing cards with your friends. You have a deck of cards and you want to arrange them in ascending order. What will you do?
 
 Simple way is to find the smallest card from the deck and put it aside. Then find the second smallest card and put it aside. Repeat this process until all the cards are put aside. This is called selection sort.
