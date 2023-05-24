@@ -19,12 +19,17 @@ func QuickSort(arr []int, low int, high int) {
 	}
 }
 
+// using random pivot to avoid worst case scenario of O(n^2)
+// because if the pivot is the smallest or largest element in the array
+// then the partition function will have to run n times
+// which will result in O(n^2)
 func RandomizedPartition(arr []int, low int, high int) int {
 	randomIndex := rand.Intn(high-low+1) + low
 	Swap(arr, randomIndex, high)
 	return Partition(arr, low, high)
 }
 
+// partitioning the array into two halves and returning the index of the pivot
 func Partition(arr []int, low int, high int) int {
 	pivot := arr[high]
 	i := low - 1
