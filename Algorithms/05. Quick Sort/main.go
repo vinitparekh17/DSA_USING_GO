@@ -14,7 +14,9 @@ func main() {
 func QuickSort(arr []int, low int, high int) {
 	if low < high {
 		pivot := RandomizedPartition(arr, low, high)
+		// The first recursive call sorts the subarray that contains the elements that are smaller than the pivot.
 		QuickSort(arr, low, pivot-1)
+		// The second recursive call sorts the subarray that contains the elements that are greater than the pivot.
 		QuickSort(arr, pivot+1, high)
 	}
 }
