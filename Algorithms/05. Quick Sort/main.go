@@ -24,6 +24,9 @@ func QuickSort(arr []int, low int, high int) {
 // then the partition function will have to run n times
 // which will result in O(n^2)
 func RandomizedPartition(arr []int, low int, high int) int {
+	// this rand.Intn is using pseudo-random number generator (PRNG) algorithm under the hood
+	// check out https://cs.opensource.google/go/go/+/refs/tags/go1.20.4:src/math/rand/rand.go;l=358
+	// for more info :)
 	randomIndex := rand.Intn(high-low+1) + low
 	Swap(arr, randomIndex, high)
 	return Partition(arr, low, high)
