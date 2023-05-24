@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"math/rand"
 )
 
 func main() {
@@ -12,10 +13,16 @@ func main() {
 
 func QuickSort(arr []int, low int, high int) {
 	if low < high {
-		pivot := Partition(arr, low, high)
+		pivot := RandomizedPartition(arr, low, high)
 		QuickSort(arr, low, pivot-1)
 		QuickSort(arr, pivot+1, high)
 	}
+}
+
+func RandomizedPartition(arr []int, low int, high int) int {
+	randomIndex := rand.Intn(high-low+1) + low
+	Swap(arr, randomIndex, high)
+	return Partition(arr, low, high)
 }
 
 func Partition(arr []int, low int, high int) int {
@@ -24,14 +31,14 @@ func Partition(arr []int, low int, high int) int {
 	for j := low; j < high; j++ {
 		if arr[j] < pivot {
 			i++
-			Swapping(arr, i, j)
+			Swap(arr, i, j)
 		}
 	}
-	Swapping(arr, i+1, high)
+	Swap(arr, i+1, high)
 	return i + 1
 }
 
-func Swapping(arr []int, i int, j int) {
+func Swap(arr []int, i int, j int) {
 	temp := arr[j]
 	arr[j] = arr[i]
 	arr[i] = temp
