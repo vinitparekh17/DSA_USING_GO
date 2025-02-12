@@ -66,7 +66,7 @@ Slices are a data structure that stores a collection of elements of the same typ
 
 Linked lists are a data structure that stores a collection of elements, where each element is linked to the next element. Linked lists are not indexed, which means that We cannot access elements by their index.
 
-To declare a linked list in Go, We use the following syntax:
+Here Golang offers built-in linked list implementation in the `container/list` package. Which is a doubly linked list implementation. Doubly linked list means that each element has a pointer to the next element and the previous element.
 
 ```go
 list_name := list.New()
@@ -138,6 +138,13 @@ for e := list_name.Front(); e != nil; e = e.Next() {
 | Insertions | O(1) | O(n) |
 | Deletions | O(1) | O(n) |
 | Memory usage | O(n) | O(n) |
+
+## When to use which type of Linked List:
+
+* `Linked List`: When We need more flexibility.
+* `Doubly Linked List`: When We need to traverse the list in both directions.
+* `Circular Linked List`: When We need to traverse the list in a circular manner. i.e. the last element points to the first element.
+* `Singly Linked List`: When We need to traverse the list in a single direction.
 
 ## Exercise:
 

@@ -6,6 +6,15 @@ import (
 	"sort"
 )
 
+// This code demonstrates various operations on arrays, slices, and linked lists in Go.
+// It performs the following operations:
+//  1. Creates an array and a slice from the array.
+//  2. Appends an element to the slice.
+//  3. Sorts the slice.
+//  4. Retrieves and sets elements in the slice.
+//  5. Reverses the slice.
+//  6. Initializes a linked list and performs various operations on it, such as adding elements, pushing another list into it,
+//     removing an element, and inserting an element after a specific position.
 func main() {
 	arr := [5]int{3, 1, 2, 5, 4}
 	slice := arr[:]  // slice of the arr
@@ -34,6 +43,10 @@ func main() {
 	fmt.Println(slice)
 
 	// initilizing a linked list
+	fmt.Printf("\n\nLinked List\n\n")
+
+	// Golang has a built-in package called "container/list" that provides a doubly linked list implementation.
+	// ref: https://golang.org/pkg/container/list/
 	linkedList := list.New()
 	fmt.Println(linkedList)
 
@@ -65,7 +78,7 @@ func main() {
 	}
 
 	// insert elem. in mid
-	linkedList.InsertAfter(2, linkedList.Front()) // add 2 at position 2 ezy :)
+	linkedList.InsertAfter(2, linkedList.Front()) // add 2 -at position 2 ezy :)
 	fmt.Println("Insert after first elem..")
 	for e := linkedList.Front(); e != nil; e = e.Next() {
 		fmt.Println(e.Value)

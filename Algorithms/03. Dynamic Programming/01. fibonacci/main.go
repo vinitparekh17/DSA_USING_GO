@@ -101,7 +101,7 @@ func fib2(n int) int {
 	return dp[n]
 }
 
-// fib3 implements same as above but optimized to O(1) space, since only last 2 value should be remembered
+// fib3 implements Sliding Window DP approch coz optimized to O(1) space, since only last 2 value should be remembered
 // Time Complexity: O(n) - linear
 // Space Complexity: O(1)
 // Advantages: Best version, no recursion, constant space usage
